@@ -1,0 +1,24 @@
+<div class="custom-fields-editor">
+    <ul dnd-list="vm.data">
+        <li
+            ng-repeat="item in vm.data"
+
+            dnd-draggable="item"
+            dnd-moved="vm.data.splice($index, 1)"
+            dnd-effect-allowed="move"
+            dnd-selected="models.selected = item"
+
+            ng-class="{'selected': models.selected === item}"
+        >
+            <a class="remove-item-button" href="" ng-click="vm.removeItem($index)">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </a>
+
+            <custom-fields-editor
+                    schema="vm.schema"
+                    data="item"
+            ></custom-fields-editor>
+        </li>
+    </ul>
+    <a href="" ng-click="vm.addItem()">Add</a>
+</div>

@@ -1,0 +1,89 @@
+<html ng-app="app">
+<head>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="https://use.fontawesome.com/0cc45ab8c9.js"></script>
+    <script src="../vendor.js"></script>
+    <script src="../custom-fields.js"></script>
+
+    <script src="app.js"></script>
+    <script src="demoCtrl.js"></script>
+    <link  rel="stylesheet" href="../custom-fields.css" type="text/css">
+
+</head>
+<body>
+
+
+
+<div class="container">
+    <h1>
+        Custom fields demo
+    </h1>
+
+    <div ng-controller="demoCtrl as vm">
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>Schema Editor: </h2>
+                <schema-editor schema="vm.schema"    ></schema-editor>
+
+
+                <br/>
+                <br/>
+
+
+                <h2>Object Editor: </h2>
+                <custom-fields-editor
+                        schema="vm.schema"
+                        data="vm.data[0]"
+                ></custom-fields-editor>
+
+
+                <br/>
+                <br/>
+
+                <h2>Objects List Editor: </h2>
+
+                <custom-fields-objects-list
+                        schema="vm.schema"
+                        data="vm.data"
+                ></custom-fields-objects-list>
+
+            </div>
+            <div class="col-sm-4">
+                <h3>Schema</h3>
+<pre>
+{{vm.schema | json }}
+</pre>
+                <h3>Data</h3>
+<pre>
+{{vm.data | json }}
+</pre>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

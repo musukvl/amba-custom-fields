@@ -1,0 +1,15 @@
+.custom-fields-editor {
+
+  .field-editor {
+    input[type='text'],
+    input[type='number'],
+    input[type='email'],
+    input[type='date'],
+    input[type='datetime'],
+    select,
+    textarea {
+      width: 100%;
+    }
+  }
+
+}

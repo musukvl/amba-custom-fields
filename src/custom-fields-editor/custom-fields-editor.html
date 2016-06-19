@@ -1,0 +1,41 @@
+<div  class="custom-fields-editor">
+    <div ng-repeat="field in vm.schema">
+        <div class="field-label">
+            {{ field.label }}
+        </div>
+        <div ng-switch="field.type" class="field-editor">
+
+            <div ng-switch-when="number">
+                <dnd-nodrag>
+                    <input type="number" ng-model="vm.data[field.name]">
+                </dnd-nodrag>
+            </div>
+            <div ng-switch-when="text">
+                <dnd-nodrag>
+                    <input type="text" ng-model="vm.data[field.name]">
+                </dnd-nodrag>
+            </div>
+            <div ng-switch-when="textarea">
+                <dnd-nodrag>
+                    <textarea ng-model="vm.data[field.name]"></textarea>
+                </dnd-nodrag>
+            </div>
+            <div ng-switch-when="checkbox">
+
+                <dnd-nodrag>
+                    <input type="checkbox" ng-model="vm.data[field.name]">
+                </dnd-nodrag>
+
+            </div>
+            <div ng-switch-when="select">
+                <dnd-nodrag>
+                    <select ng-model="vm.data[field.name]">
+                        <option ng-repeat="option in field.options" value="{{option.value}}">{{option.label}}</option>
+                    </select>
+                </dnd-nodrag>
+            </div>
+
+        </div>
+    </div>
+
+</div>

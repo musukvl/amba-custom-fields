@@ -1,0 +1,27 @@
+{
+  "name": "amba-custom-fields",
+  "version": "0.0.1",
+  "authors": [
+    "Alexey Ryazhskikh <musuk-vl@yandex.ru>"
+  ],
+  "description": "Angular directives to manage objects with custom fields",
+  "main": "custom-fields.js",
+  "keywords": [
+    "custom",
+    "fields"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/musukvl/amba-custom-fields",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4",
+    "angular-drag-and-drop-lists": "^1.4.0",
+    "font-awesome": ""
+  }    
+}
