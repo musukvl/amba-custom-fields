@@ -32,6 +32,9 @@
         }
 
         vm.addItem = function() {
+            if (!vm.data) { 
+              vm.data = [];
+            }
             vm.data.push({});
         }
 
